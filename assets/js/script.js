@@ -47,7 +47,7 @@ $(document).ready(function () {
     $(document).on("click",".close", function () {
         $(".start").hide()
         $("body").css({
-            "background": "url(../../assets/images/bg_image.jpg)",
+            "background": "url(../assets/images/bg_image.jpg)",
             "background-size": "cover"
         })
         $("#container").show(500).fadeIn(1000);
