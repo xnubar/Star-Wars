@@ -1,10 +1,119 @@
-#container {
-    background: url("../images/bg_image.jpg");
+body {
+    font-family: Arial, sans-serif;
+    background: url("../images/star-wars.jpg") no-repeat;
     background-size: cover;
     height: 100vh;
+  }
+  #container {
+    height: 100vh;
     font-family: 'Titillium Web', sans-serif;
+    display: none;
 }
 
+  
+  .start {
+      padding: 30px;
+      text-align: center;
+  }
+
+  .start .pop-up {
+      display: none;
+  }
+
+  .box {
+    width: 40%;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #E0D636;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: #E0D636;
+    padding: 15px;
+    font-size: 1.1em;
+  }
+
+
+  .popup .content {
+    display: none;
+    max-height: 30%;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #E0D636;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
 #container .star-wars {
     padding: 20px;
 }
@@ -66,4 +175,16 @@
 #container .star-wars .attack  {
     clear: both;
     margin:10px 0;
+    background: #fff;
+}
+
+
+#container .star-wars .results-text {
+    clear: both;
+}
+
+
+
+#container .star-wars .re-start {
+    display: none;
 }

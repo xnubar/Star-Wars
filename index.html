@@ -15,9 +15,22 @@
 </head>
 
 <body>
-    <section id="container">
-        <div class="star-wars">
+    <div class="start">
+        <div class="box">
+            <a class="button" href="#popup1">START</a>
+        </div>
+        <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Good Luck!!!</h2>
+                    <a class="close" href="#">&times;</a>
+                </div>
+            </div>
+    </div>
 
+
+    <section id="container">
+
+        <div class="star-wars">
             <div class="star-wars-header">
                 <h4 class="star-wars-header-title">Star Wars RPG!</h4>
             </div>
@@ -47,9 +60,11 @@
             </div>
 
             <div class="results-text">
-                <h4 class="your-result-text"></h4>
                 <h4 class="enemy-result-text"></h4>
+                <h4 class="your-result-text"></h4>
             </div>
+
+            <button class="re-start">Restart</button>
         </div>
     </section>
     <script src="./assets/js/script.js"></script>
