@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     (function () {
-        audio = new Audio("../musics/start.mp3");
+        audio = new Audio("./assets/musics/start.mp3");
         audio.play();
     })();
 
@@ -32,11 +32,11 @@ $(document).ready(function () {
             audio.pause();
         }
         if (type === "won") {
-            audio = new Audio("../musics/youWon.mp3")
+            audio = new Audio("./assets/musics/youWon.mp3")
         } else if (type === "lost") {
-            audio = new Audio("../musics/youLost.mp3")
+            audio = new Audio("./assets/musics/youLost.mp3")
         } else if (type === "hit") {
-            audio = new Audio("../musics/hit.mp3")
+            audio = new Audio("./assets/musics/hit.mp3")
         }
         audio.play();
     }
@@ -47,7 +47,7 @@ $(document).ready(function () {
     $(document).on("click",".close", function () {
         $(".start").hide()
         $("body").css({
-            "background": "url(../images/bg_image.jpg)",
+            "background": "url(./assets/images/bg_image.jpg)",
             "background-size": "cover"
         })
         $("#container").show(500).fadeIn(1000);
@@ -86,10 +86,10 @@ $(document).ready(function () {
 
         loadWarriors() {
             let warriors = [];
-            warriors.push(new Warrior("Obi-Wan Kenobi", 120, "../images/obi_wan_kenobi.jpeg"))
-            warriors.push(new Warrior("Luke Skywalker", 100, "../images/luke_skywalker.jpeg"));
-            warriors.push(new Warrior("Darth Sidious", 150, "../images/darth_sidious.jpg"));
-            warriors.push(new Warrior("Darth Maul", 180, "../images/darth_maul.jpg"))
+            warriors.push(new Warrior("Obi-Wan Kenobi", 120, "./assets/images/obi_wan_kenobi.jpeg"))
+            warriors.push(new Warrior("Luke Skywalker", 100, "./assets/images/luke_skywalker.jpeg"));
+            warriors.push(new Warrior("Darth Sidious", 150, "./assets/images/darth_sidious.jpg"));
+            warriors.push(new Warrior("Darth Maul", 180, "./assets/images/darth_maul.jpg"))
 
 
             for (let i = 0; i < warriors.length; i++) {
